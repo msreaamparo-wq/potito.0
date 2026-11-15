@@ -1,8 +1,10 @@
 // ALL EVENT DETAILS LIVE HERE. Edit this file only.
 
 // Helper: album('one', 1, 3) -> ['/images/one/1-1.jpg', '/images/one/1-2.jpg', '/images/one/1-3.jpg']
+const asset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
 const album = (folder, prefix, count) =>
-  Array.from({ length: count }, (_, i) => `/images/${folder}/${prefix}-${i + 1}.jpg`);
+  Array.from({ length: count }, (_, i) => asset(`images/${folder}/${prefix}-${i + 1}.jpg`));
 
 export const CONFIG = {
   name: 'Shaun Matthew Inson',
@@ -25,17 +27,17 @@ export const CONFIG = {
   },
   rsvpEmail: '', // optional backup, e.g. 'family@example.com'
 
-  musicFile: '/music/just.mp4',
+  musicFile: asset('music/just.mp4'),
 
   // "My Little World" gallery. Files are in /public/images/little/
   // Photos (.jpg/.png) and videos (.mp4) both work. Add or remove lines freely.
   photos: [
-    '/images/little/1.jpg',
-    '/images/little/2.jpg',
-    '/images/little/3.jpg',
-    '/images/little/4.jpg',
-    '/images/little/5.jpg',
-    '/images/little/6.mp4'
+    asset('images/little/1.jpg'),
+    asset('images/little/2.jpg'),
+    asset('images/little/3.jpg'),
+    asset('images/little/4.jpg'),
+    asset('images/little/5.jpg'),
+    asset('images/little/6.mp4')
   ],
   // One caption per item above, in the same order.
   photoCaptions: [

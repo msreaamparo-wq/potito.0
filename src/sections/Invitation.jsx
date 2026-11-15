@@ -53,7 +53,7 @@ export default function Invitation({ onOpen }) {
 
             {/* Actual Cake Image */}
             <img
-              src="/images/cake/cake1.png"
+              src={`${import.meta.env.BASE_URL}images/cake/cake1.png`}
               alt="Shaun Matthew's First Birthday Cake"
               className="relative z-10 w-full max-w-[20rem] object-contain px-4 py-5 drop-shadow-[0_20px_24px_rgba(36,65,95,0.16)] sm:max-w-[23rem] sm:px-6 lg:max-w-[25rem]"
             />

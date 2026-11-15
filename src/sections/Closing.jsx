@@ -27,7 +27,7 @@ export default function Closing() {
         <div className="relative mx-auto w-full max-w-[19rem]">
           <div className="pointer-events-none absolute -bottom-2 left-1/2 h-8 w-3/4 -translate-x-1/2 rounded-full bg-ink/15 blur-2xl" />
           <motion.img
-            src="/images/cake/cake1.png"
+            src={`${import.meta.env.BASE_URL}images/cake/cake1.png`}
             alt="Shaun Matthew's first birthday cake"
             className="relative w-full object-contain drop-shadow-[0_20px_24px_rgba(36,65,95,0.18)]"
             animate={{ y: [0, -8, 0] }}
